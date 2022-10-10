@@ -1,0 +1,36 @@
+
+.content{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+.terminal{
+    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    font-size: 25px;
+    line-height: 25px;
+    box-sizing: border-box;
+    text-align:left;
+    font-weight: 700;
+    font-family: monospace;
+    animation-name: terminalAnimation;
+    animation-duration: 5s;
+}
+
+.inputArea{
+    color: #b8bb26;
+}
+
+.atSymbol{
+    color: #83a59a;
+}
+
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}

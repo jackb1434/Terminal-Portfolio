@@ -1,22 +1,22 @@
 // Holds all of the commands for the terminal
 
 
-home = [
+var home = [
     "who             Who am I?",
     "projects        View my projects!",
     "social          View my socials."
 ]
 
-who = [
+var who = [
     "My name is Jack and I have been developing for around 2 years now",
 ]
 
-projects = [
+var projects = [
     "I dont have many projects out at the moment, but I am working on a few behind the scenes right now",
     "including: a game engine writtin in C#, a website that creates minecraft texture packs, and some games"
 ]
 
-social = [
+var social = [
     "You can find me on:",
     "GitHub: ",
     "YouTube: ",
@@ -28,16 +28,17 @@ social = [
 export function CallCommand(command){
     switch(command){
         case "home":
-            return home;
-            break;
+            console.log("user called home");
+            
+            //return home;
         case "who":
+            console.log("user calld who");
             return who;
-            break;
         case "projects":
+            console.log("user called projects");
             return projects;
-            break;
         case "social":
+            console.log("user called social");
             return social;
-            break;
     }
 }

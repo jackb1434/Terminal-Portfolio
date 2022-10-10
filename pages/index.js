@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { RunService } from '../scripts/terminal'
 
 export default function Home() {
+
   return (
     <div>
       <Head>
@@ -10,9 +12,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Hello, World!</h1>
-        <input type="text"></input>
+        <div className={styles.content}>
+          <div className={styles.terminal}>
+            <pre>
+              &nbsp;                              __<br/>
+              &nbsp;_ _ _     _                  |  |<br/>
+                  | | | |___| |___ ___ _____ ___|  |<br/>
+                  | | | | -_| |  _| . |     | -_|__|<br/>
+                  |_____|___|_|___|___|_|_|_|___|__|<br/>
+            </pre>
+
+            <p className={styles.inputArea}>portfolio<span className={styles.atSymbol}>@</span>jackb1434:/$</p>
+          </div>
+        </div>
       </main>
     </div>
   )
 }
+
