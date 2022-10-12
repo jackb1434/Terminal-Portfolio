@@ -4,14 +4,14 @@
     animation-duration: 1s;
 }
 
-.terminal{
+.main{
     
     position: absolute;
     bottom: 0;
     width: 100%;
     min-height: 100%;
     padding: 20px;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 25px;
     box-sizing: border-box;
     text-align:left;
@@ -19,6 +19,18 @@
     font-family: monospace;
     animation-name: terminalAnimation;
     animation-duration: 5s;
+}
+
+.event{
+    color: #d3869b;
+}
+
+.error{
+    color: #fb4934;
+}
+
+.success{
+    color: #8ec07c;
 }
 
 .inputArea{

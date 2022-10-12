@@ -1,0 +1,13 @@
+<p><span className={styles.event}>event</span> - compiling</p>
+            <p><span className={styles.event}>event</span> - waiting for server</p>
+            <p><span className={styles.error}>error</span> - server not responding</p>
+            <p><span className={styles.event}>event</span> - ping: 9.2ms</p>
+            <p><span className={styles.success}>succsess</span> - connected to server</p>
+            <pre>
+              &nbsp;                              __<br/>
+              &nbsp;_ _ _     _                  |  |<br/>
+                  | | | |___| |___ ___ _____ ___|  |<br/>
+                  | | | | -_| |  _| . |     | -_|__|<br/>
+                  |_____|___|_|___|___|_|_|_|___|__|<br/>
+            </pre>
+            <p className={styles.inputArea}>portfolio<span className={styles.atSymbol}>@</span>jackb1434:/$</p>
