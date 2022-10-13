@@ -23,22 +23,3 @@ var social = [
     "Twitter: ",
     "Discord: "
 ]
-
-// Sends command to the terminal when user calls it
-export function CallCommand(command){
-    switch(command){
-        case "home":
-            console.log("user called home");
-            
-            //return home;
-        case "who":
-            console.log("user calld who");
-            return who;
-        case "projects":
-            console.log("user called projects");
-            return projects;
-        case "social":
-            console.log("user called social");
-            return social;
-    }
-}

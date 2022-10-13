@@ -4,8 +4,7 @@
     animation-duration: 1s;
 }
 
-.main{
-    
+.terminal{
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -34,7 +33,12 @@
 }
 
 .inputArea{
-    color: #b8bb26;
+    background-color: black;
+    height: 20px;
+    border: none;
+    position: fixed;
+    right: 55.8vw;
+    bottom: 37.7vw;
 }
 
 .atSymbol{
