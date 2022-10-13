@@ -33,18 +33,33 @@
 }
 
 .inputArea{
-    background-color: black;
-    height: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: transparent;
     border: none;
-    position: fixed;
-    right: 55.8vw;
-    bottom: 37.7vw;
 }
 
 .atSymbol{
     color: #83a59a;
 }
 
+.inputLine{
+    color: #b8bb26;
+}
+
+.placeholder{
+    color: white;
+    text-shadow: 0px 0px 3px white;
+}
+
+.title{
+    color: #83a598;
+}
+
+.version{
+    color: #928374;
+}
 
 @keyframes fadeIn{
     from{opacity: 0;}

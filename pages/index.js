@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Portfolio</title>
+        <title>Terminal</title>
         <meta name="description" content="Jack's portfolio website!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -24,13 +24,12 @@ export default function Home() {
                   |_____|___|_|___|___|_|_|_|___|__|<br/>
             </pre>
           
-          <p><span className={styles.event}>event</span>&nbsp;&nbsp;&nbsp;- this is the event tag</p>
-          <p><span className={styles.error}>error</span>&nbsp;&nbsp;&nbsp;- this is the error tag</p>
-          <p><span className={styles.success}>success</span> - this is the success tag</p>
-          <p>portfolio<span className={styles.atSymbol}>@</span>jackb1434:/$</p>
-          <input type="text" className={styles.inputArea} id="textAreaID"></input>
+          <p className={styles.version}>v0.8.0</p>
+          <div className={styles.inputArea}>
+              <p className={styles.inputLine}>portfolio<span className={styles.atSymbol}>@</span>jackb1434:/$</p>
+              <input type="text" className={styles.inputArea} id="textAreaID" placeholder="enter input here" ></input>
+          </div>
           <p id="dyn"></p>
-          <button onClick={update}>Submit</button>
         </div>
       </main>
     </div>
