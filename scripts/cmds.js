@@ -2,7 +2,7 @@
 
 const home =
 "<br>"+
-'<span style="color: #83a598;">who</span>' + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +'Learn about who I am<br>'+
+'<span style="color: #83a598;">who</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +'Learn about who I am<br>'+
 '<span style="color: #83a598;">projects</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +"View my projects<br>"+
 '<span style="color: #83a598;">repo</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View project source code (GitHub)<br>"+
 '<span style="color: #83a598;">socials</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View my socials<br>"+
