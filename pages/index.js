@@ -29,7 +29,8 @@ export default function Home() {
               <p className={styles.inputLine}>portfolio<span className={styles.atSymbol}>@</span>jackb1434:/$</p>
               <input type="text" className={styles.inputArea} id="textAreaID" placeholder="enter input here" ></input>
           </div>
-          <p id="dyn">please type 'home' or 'cmds' to see a list of available commands.</p>
+          <br></br>
+          <p id="dyn">please type &apos;home&apos; or &apos;cmds&apos; to see a list of available commands.</p>
         </div>
       </main>
     </div>

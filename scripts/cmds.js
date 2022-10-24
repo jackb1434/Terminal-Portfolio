@@ -1,7 +1,6 @@
 // Holds commands for terminal
 
 const home =
-"<br>"+
 '<span style="color: #83a598;">who</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +'Learn about who I am<br>'+
 '<span style="color: #83a598;">projects</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +"View my projects<br>"+
 '<span style="color: #83a598;">repo</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View project source code (GitHub)<br>"+
@@ -10,32 +9,25 @@ const home =
 '<span style="color: #83a598;">clear</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "Clears the terminal";
 
 const projects =
-"<br>"+
 "Currently I don't have many projects on my profile, however, I am working on a lot including a game engine";
 
 const socials =
-"<br>"+
 '<a href="https://github.com/jackb1434" target="_blank" style="color: #83a598; text-decoration: underline;">GitHub</a><br>'+
 '<a href="https://www.youtube.com/channel/UC6sF6mfM8-pVqkqwxJdcatg" target="_blank" style="color: #83a598; text-decoration: underline;">YouTube</a><br>'
 
 const who =
-"<br>"+
 "I am me";
 
 const test =
-"<br>"+
 '<span style="color: red;">Hello!</span>';
 
 const repo =
-"<br>"+
 '<span style="color: #d3869b;">event</span> - sending you to the GitHub repository!'
 
 const skills =
-"<br>"+
 "Python | C# | Java | Rust | Web development (Next.js with javascript) | Unity 2D + 3D | Blender";
 
 const error =
-"<br>"+
 '<span style="color: #fb4934;">error</span>' + "&nbsp;" + "- invalid command, please type 'home' or 'cmds' to see a list of available commands.";
 
 const commands = {
