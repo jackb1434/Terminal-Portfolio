@@ -1,5 +1,4 @@
 import { callCommand } from "../scripts/cmds";
-import { init } from "../scripts/cmds";
 
 
 // send whatever information is in the text area
@@ -13,14 +12,15 @@ export function update(){
                 getInfo = textArea.value;
                 callCommand(getInfo);
                 textArea.value = '';
+                
             }
             else{
                 textArea.focus();
             }
         }
     })
+    
 }
-
 
 // wait to use document after server done rendering
 function initilialize(){
