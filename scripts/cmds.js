@@ -41,7 +41,13 @@ const commands = {
     cmds: "cmds"
 }
 
-function openGithubRepository(){
+function delay(time){
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
+async function openGithubRepository(text){
+    text.innerHTML = repo;
+    await delay(1000);
     window.open("https://github.com/jackb1434/Terminal-Portfolio", "_blank");
 }
 
@@ -85,9 +91,8 @@ export function callCommand(command){
                 setTitleState("Terminal");
                 break;
             case commands.repo:
-                paragraph.innerHTML = repo;
-                
-                openGithubRepository();
+                //paragraph.innerHTML = repo;
+                openGithubRepository(paragraph);
                 break;
             case commands.skills:
                 setTitleState("Terminal | My Skills");
