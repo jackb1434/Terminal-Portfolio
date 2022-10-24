@@ -1,5 +1,7 @@
 // Holds commands for terminal
 
+import { spellCheck } from '../scripts/spell_checker';
+
 const home =
 '<span style="color: #83a598;">who</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +'Learn about who I am<br>'+
 '<span style="color: #83a598;">projects</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +"View my projects<br>"+
@@ -28,9 +30,6 @@ const repo =
 const skills =
 "Python | C# | Java | Rust | Web development (Next.js with javascript) | Unity 2D + 3D | Blender";
 
-const error =
-'<span style="color: #fb4934;">error</span>' + "&nbsp;" + "- invalid command, please type 'home' or 'cmds' to see a list of available commands.";
-
 const system =
 '<span style="color: #fadb2f; text-decoration: bold;">SYSTEM INFO:</span>'+
 "<br>"+
@@ -42,7 +41,7 @@ const system =
 "<br>"+
 '<span style="color: #83a598;">Last Updated</span> - 10/24/2022'+
 "<br>"+
-'<span style="color: #83a598;">GitHub Commits</span> - 16';
+'<span style="color: #83a598;">GitHub Commits</span> - 18';
 
 
 const commands = {
@@ -124,6 +123,6 @@ export function callCommand(command){
         }
     }
     else{
-        paragraph.innerHTML = error;
+        paragraph.innerHTML = spellCheck(command, paragraph.innerHTML);
     }
 }
