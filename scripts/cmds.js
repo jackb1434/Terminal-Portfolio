@@ -6,6 +6,7 @@ const home =
 '<span style="color: #83a598;">repo</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View project source code (GitHub)<br>"+
 '<span style="color: #83a598;">socials</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View my socials<br>"+
 '<span style="color: #83a598;">skills</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View my current skills<br>"+
+'<span style="color: #83a598;">system</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View project information<br>"+
 '<span style="color: #83a598;">clear</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "Clears the terminal";
 
 const projects =
@@ -30,6 +31,20 @@ const skills =
 const error =
 '<span style="color: #fb4934;">error</span>' + "&nbsp;" + "- invalid command, please type 'home' or 'cmds' to see a list of available commands.";
 
+const system =
+'<span style="color: #fadb2f; text-decoration: bold;">SYSTEM INFO:</span>'+
+"<br>"+
+'<span style="color: #83a598;">Author:</span> - jackb1434'+
+"<br>"+
+'<span style="color: #83a598;">Framework</span> - Next.js'+
+"<br>"+
+'<span style="color: #83a598;">Version</span> - 0.8.9'+
+"<br>"+
+'<span style="color: #83a598;">Last Updated</span> - 10/24/2022'+
+"<br>"+
+'<span style="color: #83a598;">GitHub Commits</span> - 16';
+
+
 const commands = {
     home: "home",
     who: "who",
@@ -38,7 +53,8 @@ const commands = {
     clear : "clear",
     repo : "repo",
     skills : "skills",
-    cmds: "cmds"
+    cmds: "cmds",
+    system: "system"
 }
 
 function delay(time){
@@ -97,6 +113,10 @@ export function callCommand(command){
             case commands.skills:
                 setTitleState("Terminal | My Skills");
                 paragraph.innerHTML = skills;
+                break;
+            case commands.system:
+                setTitleState("Terminal | My Skills");
+                paragraph.innerHTML = system;
                 break;
             case "test":
                 paragraph.innerHTML = test;
