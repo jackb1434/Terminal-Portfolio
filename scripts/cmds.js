@@ -2,10 +2,11 @@
 
 const home =
 "<br>"+
-'<span style="color: #83a598;">who</span>' + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +'I am me<br>'+
+'<span style="color: #83a598;">who</span>' + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +'Learn about who I am<br>'+
 '<span style="color: #83a598;">projects</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +"View my projects<br>"+
 '<span style="color: #83a598;">repo</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View project source code (GitHub)<br>"+
-'<span style="color: #83a598;">social</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View my socials<br>"+
+'<span style="color: #83a598;">socials</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View my socials<br>"+
+'<span style="color: #83a598;">skills</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "View my current skills<br>"+
 '<span style="color: #83a598;">clear</span>' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + "Clears the terminal";
 
 const projects =
@@ -21,13 +22,25 @@ const who =
 "<br>"+
 "I am me";
 
-var test =
+const test =
 "<br>"+
 '<span style="color: red;">Hello!</span>';
 
-var repo =
+const repo =
 "<br>"+
 '<span style="color: #d3869b;">event</span> - sending you to the GitHub repository!'
+
+const skills =
+"<br>"+
+"Python | C# | Java | Rust | Web development (Next.js with javascript) | Unity 2D + 3D | Blender";
+
+const error =
+"<br>"+
+'<span style="color: #fb4934;">error</span>' + "&nbsp;" + "- invalid command, please type 'home' or 'cmds' to see a list of available commands.";
+
+const instructions =
+"<br>"+
+"please type 'home' or 'cmds' to see a list of available commands.";
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -41,37 +54,69 @@ function setTitleState(state){
     document.title = state;
 }
 
+const commands = {
+    home: "home",
+    who: "who",
+    projects : "projects",
+    socials: "socials",
+    clear : "clear",
+    repo : "repo",
+    skills : "skills",
+    cmds: "cmds"
+}
+
 export function callCommand(command){
     var paragraph = document.getElementById('dyn');
 
-    switch(command){
-        case "home":
-            paragraph.innerHTML = home;
-            setTitleState("Terminal | Home");
-            break;
-        case "who":
-            paragraph.innerHTML = who;
-            setTitleState("Terminal | Background");
-            break;
-        case "projects":
-            paragraph.innerHTML = projects;
-            setTitleState("Terminal | My Projects");
-            break;
-        case "socials":
-            paragraph.innerHTML = socials;
-            setTitleState("Terminal | My Socials");
-            break;
-        case "clear":
-            paragraph.innerHTML = "";
-            setTitleState("Terminal");
-            break;
-        case "repo":
-            paragraph.innerHTML = repo;
-            setTitleState("Terminal");
-            openGithubRepository();
-            break;
-        case "test":
-            paragraph.innerHTML = test;
-            break;
+    var all = []
+    for (var key in commands){
+        all.push(commands[key]);
     }
+    commands.all = all;
+
+    if (all.includes(command)){
+        switch(command){
+            case commands.home:
+                paragraph.innerHTML = home;
+                setTitleState("Terminal | Home");
+                break
+            case commands.cmds:
+                paragraph.innerHTML = home;
+                setTitleState("Terminal | Home");
+                break;
+            case commands.who:
+                paragraph.innerHTML = who;
+                setTitleState("Terminal | Background");
+                break;
+            case commands.projects:
+                paragraph.innerHTML = projects;
+                setTitleState("Terminal | My Projects");
+                break;
+            case commands.socials:
+                paragraph.innerHTML = socials;
+                setTitleState("Terminal | My Socials");
+                break;
+            case commands.clear:
+                paragraph.innerHTML = "";
+                setTitleState("Terminal");
+                break;
+            case commands.repo:
+                paragraph.innerHTML = repo;
+                
+                openGithubRepository();
+                break;
+            case commands.skills:
+                setTitleState("Terminal | My Skills");
+                paragraph.innerHTML = skills;
+                break;
+            case "test":
+                paragraph.innerHTML = test;
+                break;
+        }
+    }
+    else{
+        paragraph.innerHTML = error;
+    }
+
+    
 }

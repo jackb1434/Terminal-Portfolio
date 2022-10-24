@@ -1,4 +1,5 @@
 import { callCommand } from "../scripts/cmds";
+import { init } from "../scripts/cmds";
 
 
 // send whatever information is in the text area
@@ -25,7 +26,7 @@ export function update(){
 function initilialize(){
     if (typeof window === "object"){
         document.addEventListener("DOMContentLoaded", function(){
-            alert('Successfully initialized');
+            //alert('Successfully initialized');
             update(); // call function to listen to input
         });
     }

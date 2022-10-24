@@ -24,7 +24,7 @@ export default function Home() {
                   |_____|___|_|___|___|_|_|_|___|__|<br/>
             </pre>
           
-          <p className={styles.version}>v0.8.0</p>
+          <p className={styles.version}>v0.8.9</p>
           <div className={styles.inputArea}>
               <p className={styles.inputLine}>portfolio<span className={styles.atSymbol}>@</span>jackb1434:/$</p>
               <input type="text" className={styles.inputArea} id="textAreaID" placeholder="enter input here" ></input>
