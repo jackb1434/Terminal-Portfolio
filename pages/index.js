@@ -30,7 +30,7 @@ export default function Home() {
               <input type="text" className={styles.inputArea} id="textAreaID" placeholder="enter input here" ></input>
           </div>
           <br></br>
-          <p id="dyn">please type &apos;home&apos; or &apos;cmds&apos; to see a list of available commands.</p>
+          <p id="dyn">please type home or cmds to see a list of available commands.</p>
         </div>
       </main>
     </div>
