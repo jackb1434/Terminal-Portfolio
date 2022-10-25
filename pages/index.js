@@ -24,13 +24,15 @@ export default function Home() {
                   |_____|___|_|___|___|_|_|_|___|__|<br/>
             </pre>
           
-          <p className={styles.version}>v0.8.9</p>
+          <p className={styles.version}>v0.9.0</p>
+          <br></br>
+          <div id="iterm">
+            <p id="dyn">please type home or cmds to see a list of available commands.</p>
+          </div>
           <div className={styles.inputArea}>
               <p className={styles.inputLine}>portfolio<span className={styles.atSymbol}>@</span>jackb1434:/$</p>
               <input type="text" className={styles.inputArea} id="textAreaID" placeholder="enter input here" ></input>
           </div>
-          <br></br>
-          <p id="dyn">please type home or cmds to see a list of available commands.</p>
         </div>
       </main>
     </div>
